@@ -13,7 +13,7 @@ with st.sidebar:
     if openai_api_key:
         os.environ["OPENAI_API_KEY"] = openai_api_key
 
-post_word = st.text_input('입력해주세요.')
+post_word = st.text_input('자세하게 입력해주시면 좋아요!')
 post_button = st.button('생성하기')
 if post_button and openai_api_key:
     with st.spinner('생성 중입니다.'):
