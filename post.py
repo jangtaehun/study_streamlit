@@ -3,6 +3,7 @@ import openai
 import os
 
 st.title('몽타주 GPT')
+st.write('왼쪽 슬라이드에 API KEY를 입력해주세요.')
 st.write('얼굴 형태를 입력해주세요.')
 
 # OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
@@ -25,7 +26,7 @@ if post_button and openai_api_key:
                             "content": """
                             당신은 몽타주를 제작해 주는 몽타주 전문가 입니다.
                             속도가 느려도 괜찮습니다. 생성자가 원하는 느낌의 몽타주를 제작해 주세요.
-                            사람의 얼굴을 그려해. 중요해 사람 얼굴.
+                            사람의 얼굴을 그려해. 중요해 사람 얼굴 특정 부분이 아닌 전체.
                             그리고 150자 이내로 만들어줘
                             """
                         },
