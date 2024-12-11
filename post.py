@@ -2,8 +2,8 @@ import streamlit as st
 import openai
 import os
 
-st.title('포스트 GPT')
-st.write('만들고 싶은 것을 알려주세요.')
+st.title('몽타주 GPT')
+st.write('얼굴 형태를 입력해주세요.')
 
 # OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
 
@@ -23,8 +23,10 @@ if post_button and openai_api_key:
                         {
                             "role": "system",
                             "content": """
-                            당신은 제품 홍보 포스터를 제작해 주는 제품 홍보 포스터 전문가 입니다.
-                            속도가 느려도 괜찮습니다. 소비자가 원하는 느낌의 제품 홍보 포스터를 제작해 주세요.
+                            당신은 몽타주를 제작해 주는 몽타주 전문가 입니다.
+                            속도가 느려도 괜찮습니다. 생성자가 원하는 느낌의 몽타주를 제작해 주세요.
+                            사람의 얼굴을 그려해. 중요해 사람 얼굴.
+                            그리고 150자 이내로 만들어줘
                             """
                         },
                         {"role": "user", "content": post_word}
